@@ -1,0 +1,9 @@
+/cache
+/logs
+/Resources
+/autoload.php
+/bootstrap.php.cache
+/check.php
+/console
+/phpunit.xml.dist
+/SymfonyRequirements.php
