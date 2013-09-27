@@ -33,7 +33,7 @@ class PublicController extends Controller
 		$match = $rep_matchs->getDernierMatch();
 		
 		$rep_feuilleMatch = $this->getDoctrine()->getRepository('DFManageMatchBundle:FeuilleMatch');
-		$feuilleMatch = $rep_feuilleMatch->
+		$feuilleMatch = $rep_feuilleMatch->findByMatch($match->getId());
 		
 		return $this->render('DFMatchBundle:Public:dernierMatch.html.twig', array(
 			'match' => $match	
