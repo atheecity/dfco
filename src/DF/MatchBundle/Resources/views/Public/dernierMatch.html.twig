@@ -18,9 +18,11 @@
 			</div>
 		</div>
 		<div id="feuille-match">
-			<a href="{{ path('DFManageMatchBundle_showMatch', { 
-				match_id : match.id
-			}) }}" >Voir feuille de match</a>
+			{% if match.feuilleMatch is not null %}
+				<a href="{{ path('DFManageMatchBundle_showMatch', { 
+					match_id : match.id
+				}) }}" >Voir feuille de match</a>
+			{% endif %}
 		</div>
 	</div>
 </div>

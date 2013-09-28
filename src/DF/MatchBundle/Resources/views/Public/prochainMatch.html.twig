@@ -17,5 +17,12 @@
 				<img src="{{ match.equipeExt.logo }}" alt="" />
 			</div>
 		</div>
+		<div id="feuille-match">
+			{% if match.feuilleMatch is not null %}
+				<a href="{{ path('DFManageMatchBundle_showMatch', { 
+					match_id : match.id
+				}) }}" >Voir feuille de match</a>
+			{% endif %}
+		</div>
 	</div>
 </div>

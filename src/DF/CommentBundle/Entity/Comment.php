@@ -10,7 +10,7 @@ use Symfony\Component\Config\Definition\IntegerNode;
 use PA\CommentairesBundle\Controller\PublicController;
 
 /**
- * @ORM\Table(name="v4_commentaires")
+ * @ORM\Table(name="comment")
  * @ORM\Entity
  * @ORM\ChangeTrackingPolicy("DEFERRED_EXPLICIT")
  */

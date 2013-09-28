@@ -15,6 +15,7 @@ class PublicController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager();
 		$match = $em->getRepository('DFMatchBundle:Matchs')->find($match_id);
+		$buts = $em->getRepository('DFManageMatchBundle:But')->findByMatch($match);
 		
 		if (!$match) {
 			throw $this->createNotFoundException(
@@ -24,6 +25,7 @@ class PublicController extends Controller
 		
 		return $this->render('DFManageMatchBundle:Public:show-match.html.twig', array(
 			'match' => $match,
+			'buts' => $buts,
 		));
 	}
 	
@@ -31,6 +33,15 @@ class PublicController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager();
 		$match = $em->getRepository('DFMatchBundle:Matchs')->find($match_id);
+		
+		if ($type == 'home')
+			$equipe = $match->getEquipeDom();
+		else
+			$equipe = $match->getEquipeExt();
+		
+		$clubEntraineur = $em->getRepository('DFEquipeBundle:ClubEntraineur')->findOneBy(
+				array('club' => $equipe, 'saison' => 1)
+		);
 		
 		if (!$match) {
 			throw $this->createNotFoundException(
@@ -42,11 +53,13 @@ class PublicController extends Controller
 			return $this->render('DFManageMatchBundle:Public:team.html.twig', array(
 				'equipe' => $match->getEquipeDom(),
 				'composition' => $match->getFeuilleMatch()->getCompositionDom(),
+				'clubEntraineur' => $clubEntraineur,
 			));
 		elseif ($type == 'away')
 			return $this->render('DFManageMatchBundle:Public:team.html.twig', array(
-					'equipe' => $match->getEquipeExt(),
-					'composition' => $match->getFeuilleMatch()->getCompositionExt(),
+				'equipe' => $match->getEquipeExt(),
+				'composition' => $match->getFeuilleMatch()->getCompositionExt(),
+				'clubEntraineur' => $clubEntraineur,
 			));
 	}
 	

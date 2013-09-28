@@ -28,7 +28,11 @@
 			<div id="top-match-but">
 				<div class="scorers right">
 					<ul>
-						
+						{% for but in buts %}
+							{% if but.equipe.id == match.equipeDom.id %}
+								<li>{{ but.joueur.prenom }} {{ but.joueur.nom }} {{ but.minute }}'</li>
+							{% endif %}
+						{% endfor %}
 					</ul>
 				</div>
 				<div class="logo"></div>
@@ -58,5 +62,10 @@
 				})) }}
 			</div>
 		</div>
+	</div>
+	<div id="live-text">
+		<header>LIVE</header>
+		<hr>
+		<p>Ancun live pour ce match</p>
 	</div>
 {% endblock %}
