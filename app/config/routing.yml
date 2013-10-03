@@ -1,3 +1,7 @@
+df_sondage:
+    resource: "@DFSondageBundle/Resources/config/routing.yml"
+    prefix:   /
+
 df_manage_match:
     resource: "@DFManageMatchBundle/Resources/config/routing.yml"
     prefix:   /

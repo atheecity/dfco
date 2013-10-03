@@ -15,12 +15,36 @@
 }
 
 #calendrier-club thead tr {
-	border-bottom: 2px solid #444;
-	line-height: 40px;
 	color: #444;
 }
 
-#calendrier-club table tr td {
+#calendrier-club thead th {
+	font-size: 12px;
+}
+
+#calendrier-club tbody tr {
+	border-spacing: 0;
+	background-color: #f9f9f9;
+}
+
+#calendrier-club .font1 {
+	font-weight: bold;
+}
+
+#calendrier-club tbody tr td {
+	padding: 10px 0;
+	font-size: 15px;
+}
+
+#calendrier-club .journee {
+	padding-left: 20px;	
+}
+
+#calendrier-club .date {
+	padding-left: 10px;
+}
+
+#calendrier-club table thead tr td {
 	font-size: 12px;
 }
 

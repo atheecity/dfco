@@ -18,10 +18,6 @@
 		{{ render(controller('DFMatchBundle:Public:selectModuleMatch')) }}
 		{{ render(controller('DFMatchBundle:Public:moduleClassement')) }}
 	</div>
-	<div style="width:340px;margin-top:25px;display: inline-block; vertical-align:top">
-		<div class="title-ribbons" style="height:250px"> <h1>SONDAGE <span class="arrow"></span> </h1>
-				
-		</div>
-	</div>
+	{{ render(controller('DFSondageBundle:Public:moduleSondage')) }}
 	{{ render(controller('DFReportersBundle:Public:reporters')) }}
 {% endblock %}

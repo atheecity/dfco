@@ -105,4 +105,4 @@ fos_comment:
             delete: ROLE_ADMIN
 
 assetic: 
-    bundles: [ "FOSCommentBundle", "DFHomeBundle", "DFMatchBundle", "DFReportersBundle", "DFBreveBundle", "DFUserBundle", "FOSUserBundle", "DFManageMatchBundle" ]
+    bundles: [ "FOSCommentBundle", "DFHomeBundle", "DFMatchBundle", "DFReportersBundle", "DFBreveBundle", "DFUserBundle", "FOSUserBundle", "DFManageMatchBundle", "DFSondageBundle" ]
