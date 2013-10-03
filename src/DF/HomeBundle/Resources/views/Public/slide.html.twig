@@ -1,3 +1,13 @@
+{% javascripts '@DFHomeBundle/Resources/public/js/slide.js' %}
+	<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+{% stylesheets '@DFHomeBundle/Resources/public/css/home.css' %}
+	<link href="{{ asset_url }}" rel="stylesheet" media="screen" />
+{% endstylesheets %}
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" ></script>
+
 <div id="slide">
     {% for i in 0..3 %}
     	<div id="frag{{ i+1 }}" class="ui-tabs-panel 
@@ -27,3 +37,7 @@
 		<span class="chx" id="4">•</span>
 	</div>
 </div>
+
+<script>
+	$(autoChangFrag);
+</script>

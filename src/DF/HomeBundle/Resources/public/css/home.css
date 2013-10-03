@@ -247,6 +247,54 @@ header #saison {
 	margin-left: -326px;
 }
 
+header #supporters {
+	margin-left: -652px;
+}
+
+header #club {
+	margin-left: -489px;
+}
+
+header #club ul li {
+	padding: 10px 0;
+	height: 50px;
+	width: auto;
+	cursor: pointer;
+}
+
+header #club ul li div {
+	line-height: 50px;
+	padding: 0 20px;
+}
+
+header #club ul li div.bd_left {
+	border-left: 1px solid rgb(99, 99, 99);
+}
+
+header #club ul li div.bd_right {
+	border-right: 1px solid #1f1f1f;
+}
+
+header #supporters ul li {
+	padding: 10px 0;
+	height: 50px;
+	width: auto;
+	cursor: pointer;
+}
+
+header #supporters ul li div {
+	line-height: 50px;
+	padding: 0 20px;
+}
+
+header #supporters ul li div.bd_left {
+	border-left: 1px solid rgb(99, 99, 99);
+}
+
+header #supporters ul li div.bd_right {
+	border-right: 1px solid #1f1f1f;
+}
+
 header li img {
 	float: left;
 }
