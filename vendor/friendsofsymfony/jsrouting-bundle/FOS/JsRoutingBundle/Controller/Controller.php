@@ -13,6 +13,7 @@ namespace FOS\JsRoutingBundle\Controller;
 
 use FOS\JsRoutingBundle\Extractor\ExposedRoutesExtractorInterface;
 use FOS\JsRoutingBundle\Response\RoutesResponse;
+use FOS\JsRoutingBundle\Util\CacheControlConfig;
 use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -32,9 +33,14 @@ class Controller
     protected $serializer;
 
     /**
-     * @var \FOS\JsRoutingBundle\Extractor\ExposedRoutesExtractorInterface
+     * @var ExposedRoutesExtractorInterface
      */
     protected $exposedRoutesExtractor;
+
+    /**
+     * @var CacheControlConfig
+     */
+    protected $cacheControlConfig;
 
     /**
      * @var boolean
@@ -46,13 +52,15 @@ class Controller
      *
      * @param mixed                           $serializer             Any object with a serialize($data, $format) method
      * @param ExposedRoutesExtractorInterface $exposedRoutesExtractor The extractor service.
+     * @param array                           $cacheControl
      * @param boolean                         $debug
      */
-    public function __construct($serializer, ExposedRoutesExtractorInterface $exposedRoutesExtractor, $debug = false)
+    public function __construct($serializer, ExposedRoutesExtractorInterface $exposedRoutesExtractor, array $cacheControl = array(), $debug = false)
     {
-        $this->serializer = $serializer;
+        $this->serializer             = $serializer;
         $this->exposedRoutesExtractor = $exposedRoutesExtractor;
-        $this->debug = $debug;
+        $this->cacheControlConfig     = new CacheControlConfig($cacheControl);
+        $this->debug                  = $debug;
     }
 
     /**
@@ -96,6 +104,9 @@ class Controller
             $content = $callback.'('.$content.');';
         }
 
-        return new Response($content, 200, array('Content-Type' => $request->getMimeType($_format)));
+        $response = new Response($content, 200, array('Content-Type' => $request->getMimeType($_format)));
+        $this->cacheControlConfig->apply($response);
+
+        return $response;
     }
 }
