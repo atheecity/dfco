@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 use DF\EquipeBundle\DFEquipeBundle;
 use DF\EquipeBundle\Form\ClubType;
+use DF\EquipeBundle\Form\EntraineurType;
+use DF\EquipeBundle\Entity\Entraineur;
 
 class PrivateController extends Controller
 {
@@ -115,7 +117,18 @@ class PrivateController extends Controller
 		
 		return $this->render('DFAdminBundle:Private:form.html.twig', array(
 			'form' => $form->createView(),
-			'title' => 'Modifier un club',
+			'title' => 'Fiche Club : '.$club->getNom(),
+		));
+	}
+	
+	public function newEntraineurAction()
+	{
+		$entraineur = new Entraineur();
+		$form = $this->createForm(new EntraineurType(), $entraineur);
+		
+		return $this->render('DFAdminBundle:Private:form.html.twig', array(
+			'form' => $form->createView(),
+			'title' => 'Ajouter un entraineur',
 		));
 	}
 	

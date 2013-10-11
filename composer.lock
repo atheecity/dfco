@@ -739,17 +739,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRest.git",
-                "reference": "0.8.0"
+                "reference": "9a84df8220553e2ae3163b8325a3c4c2e9792426"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRest/zipball/0.8.0",
-                "reference": "0.8.0",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRest/zipball/9a84df8220553e2ae3163b8325a3c4c2e9792426",
+                "reference": "9a84df8220553e2ae3163b8325a3c4c2e9792426",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/http-foundation": ">=2.0,<3.0"
+                "symfony/http-foundation": "~2.0"
             },
             "type": "library",
             "extra": {
@@ -790,26 +790,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "0.12.0"
+                "reference": "324e4f1f395d24bd1997ed8b195bbded11315079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/0.12.0",
-                "reference": "0.12.0",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/324e4f1f395d24bd1997ed8b195bbded11315079",
+                "reference": "324e4f1f395d24bd1997ed8b195bbded11315079",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "1.0.*",
                 "friendsofsymfony/rest": ">=0.7.0,<0.9.0-dev",
                 "php": ">=5.3.2",
-                "symfony/framework-bundle": ">=2.1,<3.0"
+                "symfony/framework-bundle": "~2.1"
             },
             "require-dev": {
                 "jms/serializer-bundle": "0.12.*",
-                "sensio/framework-extra-bundle": ">=2.1,<3.0",
-                "symfony/form": ">=2.1,<3.0",
-                "symfony/security": ">=2.1,<3.0",
-                "symfony/yaml": ">=2.1,<3.0"
+                "sensio/framework-extra-bundle": "~2.1",
+                "symfony/form": "~2.1",
+                "symfony/security": "~2.1",
+                "symfony/yaml": "~2.1"
             },
             "suggest": {
                 "jms/serializer-bundle": "Add support for advanced serialization capabilities, recommended, requires 0.12.*",
@@ -1028,13 +1028,13 @@
             "target-dir": "JMS/AopBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/schmittjoh/JMSAopBundle",
-                "reference": "1.0.0"
+                "url": "https://github.com/schmittjoh/JMSAopBundle.git",
+                "reference": "8ef7db0043188f58da18f931937008f95b308921"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/schmittjoh/JMSAopBundle/zipball/1.0.0",
-                "reference": "1.0.0",
+                "url": "https://api.github.com/repos/schmittjoh/JMSAopBundle/zipball/8ef7db0043188f58da18f931937008f95b308921",
+                "reference": "8ef7db0043188f58da18f931937008f95b308921",
                 "shasum": ""
             },
             "require": {
@@ -1064,20 +1064,20 @@
                 "annotations",
                 "aop"
             ],
-            "time": "2012-01-02 12:50:26"
+            "time": "2012-01-02 20:50:26"
         },
         {
             "name": "jms/cg",
             "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "git://github.com/schmittjoh/cg-library.git",
-                "reference": "1.0.0"
+                "url": "https://github.com/schmittjoh/cg-library.git",
+                "reference": "ce8ef43dd6bfe6ce54e5e9844ab71be2343bf2fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/schmittjoh/cg-library/zipball/1.0.0",
-                "reference": "1.0.0",
+                "url": "https://api.github.com/repos/schmittjoh/cg-library/zipball/ce8ef43dd6bfe6ce54e5e9844ab71be2343bf2fc",
+                "reference": "ce8ef43dd6bfe6ce54e5e9844ab71be2343bf2fc",
                 "shasum": ""
             },
             "require": {
@@ -1105,7 +1105,7 @@
             "keywords": [
                 "code generation"
             ],
-            "time": "2012-01-02 12:40:52"
+            "time": "2012-01-02 20:40:52"
         },
         {
             "name": "jms/di-extra-bundle",
@@ -1231,13 +1231,13 @@
             "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "git://github.com/schmittjoh/parser-lib",
-                "reference": "1.0.0"
+                "url": "https://github.com/schmittjoh/parser-lib.git",
+                "reference": "c509473bc1b4866415627af0e1c6cc8ac97fa51d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/schmittjoh/parser-lib/archive/1.0.0.zip",
-                "reference": "1.0.0",
+                "url": "https://api.github.com/repos/schmittjoh/parser-lib/zipball/c509473bc1b4866415627af0e1c6cc8ac97fa51d",
+                "reference": "c509473bc1b4866415627af0e1c6cc8ac97fa51d",
                 "shasum": ""
             },
             "require": {
@@ -1384,7 +1384,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
